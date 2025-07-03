@@ -13,10 +13,17 @@
             box-sizing: border-box;
         }
 
+        @font-face {
+            font-family: 'Ubuntu';
+            src: url('./fonts/Ubuntu-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         html,
         body {
             height: 100%;
-            font-family: sans-serif;
+            font-family: 'Ubuntu', sans-serif;
             line-height: 1.5;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -158,16 +165,35 @@
             width: 100%;
         }
 
-
         .icon-floating-timer {
             position: absolute;
-            right: -400px;
-            top: -25px;
+            right: 13%;
+            top: 2.8rem;
             z-index: 1;
-            width: 52%;
+            width: auto;
+            height: auto;
+            max-width: 180px;
         }
 
         .icon-floating-timer img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .icon-floating-juros {
+            position: absolute;
+            left: 0%;
+            top: -40px;
+            z-index: 1;
+            max-width: 140px;
+            width: auto;
+            height: auto;
+        }
+
+        .icon-floating-juros img {
+            width: 100%;
+            height: auto;
             display: block;
         }
 
@@ -190,14 +216,25 @@
 
             .icon-floating-timer {
                 position: absolute;
-                right: -18px;
-                top: -180px;
+                right: 0px;
+                top: -140px;
                 z-index: 1;
                 width: 52%;
             }
 
             .icon-floating-timer img {
                 display: block;
+            }
+
+            .icon-floating-juros {
+                position: absolute;
+                left: 0;
+                top: -30px;
+                width: auto;
+            }
+
+            .accordion-container {
+                padding-top: 8rem !important;
             }
 
             .hero-top-button {
@@ -498,8 +535,8 @@
             width: 100%;
             margin: 0 auto;
             padding: 3rem 2rem;
-            font-family: sans-serif;
             background: #fffaf3;
+            position: relative;
         }
 
         .accordion-title {
@@ -588,7 +625,6 @@
         .footer {
             padding: 2rem 1rem;
             background: #fff;
-            font-family: sans-serif;
             color: #5e5e5e;
             text-align: left;
             display: flex;
@@ -766,12 +802,12 @@
     </header>
 
     <section class="plans-section">
+        
+        <h2>Compare e encontre a melhor opção para você e sua família!</h2>
         <picture class="icon-floating-timer">
             <source media="(min-width: 1024px)" srcset="icone_15min_desktop.svg" />
             <img src="icone_15min.svg" alt="ícone relógio" />
         </picture>
-
-        <h2>Compare e encontre a melhor opção para você e sua família!</h2>
 
         <div class="plans-carousel">
             <div class="plan-card recommended">
@@ -849,10 +885,12 @@
     </section>
 
     <section class="accordion-container">
-
-
         <div class="accordion-item active">
             <h2 class="accordion-title">Perguntas frequentes</h2>
+            <picture class="icon-floating-juros">
+                <img src="icone_juros.svg" alt="ícone porcentagem">
+            </picture>
+
             <button class="accordion-header">
                 <span>Quem pode usar o Cartão de TODOS?</span>
                 <span class="icon">−</span>
@@ -906,9 +944,9 @@
                 <div class="footer-social">
                     <span>Redes sociais</span>
                     <div class="icons">
-                        <a href="#"><img src="linkedin.svg" alt="LinkedIn" /></a>
-                        <a href="#"><img src="instagram.svg" alt="Instagram" /></a>
-                        <a href="#"><img src="facebook.svg" alt="Facebook" /></a>
+                        <a href="https://www.linkedin.com/company/cartao-de-todos/"><img src="Linkedin.svg" alt="LinkedIn" /></a>
+                        <a href="https://www.instagram.com/cartaodetodosbrasil/"><img src="Instagram.svg" alt="Instagram" /></a>
+                        <a href="https://www.facebook.com/cartaodetodosbrasil/"><img src="Facebook.svg" alt="Facebook" /></a>
                     </div>
                 </div>
 
